@@ -248,6 +248,10 @@ html {
     display: flex;
     gap: 0.775rem;
 }
+.footer-section-icons li {
+    margin: 0;
+    padding: 0;
+}
 .footer-copyright {
     display: flex;
     justify-content: space-between;
