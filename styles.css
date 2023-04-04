@@ -17,6 +17,11 @@
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-secondary: 'Times New Roman', Times, serif;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 ::selection {
     background-color: var(--color-primary400);
     color: white;
@@ -27,13 +32,14 @@ html {
 .main-header {
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 1rem 10%;
     align-items: center;
 }
 .nav {
     display: flex;
     list-style-type: none;
     gap: 2rem;
+    align-items: center;
     font-weight: 700;
     color: var(--color-neutral300);
 }
@@ -56,6 +62,7 @@ html {
 }
 .auth-nav {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 .btn {
@@ -82,6 +89,9 @@ html {
     background: var(--color-neutral100);
     color: var(--color-primary400);
 }
+.burger-menu {
+    display: none;
+}
 .hero-section {
     box-sizing: border-box;
     width: 70%;
@@ -89,16 +99,20 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     gap: 6rem;
+}
+.hero-section img {
+    width: 50%;
 }
 .hero-content {
     display: flex;
+    width: 40%;
     flex-direction: column;
     gap: 1.9rem;
 }
 .hero-content strong {
     font-weight: 700;
+    width: 500px;
     font-family: var(--font-secondary);
     color: var(--color-neutral500);
     font-size: 5.4rem;
@@ -112,19 +126,14 @@ html {
 }
 .partners {
     display: flex;
+    flex-wrap: wrap;
     margin: 2rem auto;
     width: 60%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
     gap: 4rem;
-    font-weight: 700;
-    color: var(--color-neutral300);
 }
-.hero-section.reverse {
-
-    flex-direction: row-reverse;
-}
-.hero-section.reverse a {
+.hero-section.second a {
     background: linear-gradient(0, var(--color-primary200) 50%, var(--color-neutral100) 50%);
     width: fit-content;
     color: var(--color-neutral500);
@@ -220,6 +229,8 @@ html {
     padding: 10% 15% 0%;
     display: flex;
     justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 .footer-section-item {
     display: flex;
@@ -261,9 +272,88 @@ html {
 .footer-copyright span {
     color: var(--color-neutral300)
 }
+@media (max-width: 1400px) {
+    .hero-section {
+        gap: 0;
+        align-items: flex-start;
+    }
+    .hero-content strong {
+        width: 400px;
+    }
+}
 
 @media (max-width: 1024px) {
+    .hero-content strong {
+        width: unset;
+    }
     .pricing-cards {
         flex-wrap: wrap;
+    }
+    .burger-menu {
+        display: initial;
+    }
+    .nav , .auth-nav {
+        display: none;
+    }
+    .main-header {
+        padding-top: 2rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .hero-section img {
+        width: 100%;
+    }
+    .hero-section.second {
+        flex-direction: column-reverse;
+    }
+    .hero-content {
+        width: 100%;
+    }
+    .hero-content strong, .hero-content span {
+        line-height: 1.2;
+    }
+    .contact-banner {
+        padding: 6rem 3rem;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .footer-copyright {
+        padding-top: 5rem;
+        flex-wrap: wrap;
+        gap: 3rem
+    }
+    
+}
+@media (max-width: 768px) {
+    .pricing-section {
+        width: 80%;
+    }
+    .title{
+        font-size: 2.5rem !important;
+    }
+    .big-title {
+        font-size: 3rem !important;
+    }
+    span {
+        font-size: 1rem !important;
+    }
+    .pricing-section {
+        gap: 2rem;
+    }
+}
+@media (max-width: 452px) {
+    .title {
+        font-size: 1.8rem !important;
+    }
+    .big-title {
+        font-size: 2.3rem !important;
+    }
+    span {
+        font-size: 0.8rem !important;
     }
 }
