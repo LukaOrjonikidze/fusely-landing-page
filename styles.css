@@ -224,13 +224,13 @@ html {
 }
 
 .contact-banner {
-    width: 40%;
+    width: 880px;
     margin: 10rem auto;
     background-color: var(--color-neutral500);
     color: var(--color-neutral100);
     font-family: var(--font-secondary);
     display: flex;
-    padding: 5% 5%;
+    padding: 6rem 4rem;
     justify-content: space-between;
     align-items: center;
 }
