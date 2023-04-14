@@ -111,6 +111,7 @@ html {
 }
 .burger-menu {
     display: none;
+    cursor: pointer;
 }
 .hero-section {
     box-sizing: border-box;
