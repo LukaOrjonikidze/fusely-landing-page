@@ -224,7 +224,7 @@ html {
     width: 124px;
 }
 .pricing-card .btn:hover {
-    background: var(--color-neutral100);
+    pointer-events: none;
 }
 
 .contact-banner {
