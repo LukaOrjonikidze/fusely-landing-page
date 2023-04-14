@@ -223,7 +223,7 @@ html {
 .pricing-card button {
     width: 124px;
 }
-.pricing-card btn:hover {
+.pricing-card .btn:hover {
     background: var(--color-neutral100);
 }
 
