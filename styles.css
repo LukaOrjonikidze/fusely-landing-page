@@ -371,6 +371,9 @@ html {
     }
 }
 @media (max-width: 452px) {
+    .hero-section {
+        width: 90%;
+    }
     .title {
         font-size: 1.8rem !important;
     }
