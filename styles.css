@@ -116,7 +116,7 @@ html {
 .hero-section {
     box-sizing: border-box;
     width: 70%;
-    margin: 8rem auto;
+    margin: 10% auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -286,6 +286,7 @@ html {
 .footer-section-icons li {
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 .footer-copyright {
     display: flex;
